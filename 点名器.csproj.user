@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>E:\LYKNSDeveloper\CBRC\</PublishUrlHistory>
+    <InstallUrlHistory>https://dev.lykns.tk/CBRC/</InstallUrlHistory>
+    <SupportUrlHistory>https://eow.lykns.tk/connect</SupportUrlHistory>
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory>https://www.lykns.tk/</ErrorReportUrlHistory>
+    <FallbackCulture>zh-CN</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DebugSecurityZoneURL>https://dev.lykns.tk/</DebugSecurityZoneURL>
+  </PropertyGroup>
+</Project>
