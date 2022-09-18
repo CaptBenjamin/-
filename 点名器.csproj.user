@@ -13,4 +13,7 @@
   <PropertyGroup>
     <DebugSecurityZoneURL>https://dev.lykns.tk/</DebugSecurityZoneURL>
   </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
 </Project>

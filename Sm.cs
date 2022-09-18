@@ -34,10 +34,12 @@ namespace 点名器
             if(Properties.Settings.Default.topmost==true)
             {
                 button2.BackColor = Color.Green;
+                this.TopMost = true;
             }
             else
             {
                 button2.BackColor = Color.Red;
+                this.TopMost = false;
             }
         }
 
