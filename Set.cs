@@ -162,6 +162,8 @@ namespace 点名器
 
         private void button6_Click(object sender, EventArgs e)
         {
+            Properties.Settings.Default.web = 0;
+            Properties.Settings.Default.Save();
             wb wb = new wb();
             wb.Show();
         }

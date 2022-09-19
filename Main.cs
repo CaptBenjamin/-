@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Web.WebView2.WinForms;
+using Microsoft.Web.WebView2.Wpf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -8,19 +10,21 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
+using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace 点名器
 {
     public partial class Main : Form
     {
         public static int m;
-        public static string c_name ="欢迎使用";
+        public static string c_name ="----";
         public static int num = 0;
         public Main()
         {
@@ -142,7 +146,8 @@ namespace 点名器
         private void button3_Click(object sender, EventArgs e)
         {
             num = 0;
-            button1.Text = "欢迎使用";
+            Main.c_name = "----";
+            button1.Text = "----";
             if (File.Exists(Application.StartupPath + @"\cbcf.txt"))
             {
                 if (File.Exists(Application.StartupPath + @"\cf.txt"))
@@ -251,6 +256,7 @@ namespace 点名器
             {
                 if (MessageBox.Show("未检测到可用名单\n请导入名单", "CB点名器", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
                 {
+                    r1:
                     var filePath = string.Empty;
                     OpenFileDialog openFileDialog = new OpenFileDialog();
                     openFileDialog.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
@@ -268,6 +274,17 @@ namespace 点名器
                         string[] str = File.ReadAllLines(Application.StartupPath + @"\cf.txt");
                         int.TryParse(str[0], out m);
                         MessageBox.Show("导入成功", "导入名单", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        if(MessageBox.Show("导入失败", "导入名单", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)==DialogResult.Retry)
+                        {
+                            goto r1;
+                        }
+                        else
+                        {
+                            System.Environment.Exit(0);
+                        }
                     }
                 }
                 else
@@ -321,6 +338,17 @@ namespace 点名器
             else
             {
                 MessageBox.Show("点名失败\n未检索到可用名单", "CB点名器", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("LYKNS CaptB 技术博客已于2022年7月停用，功能整合至 LYKNS 开发人员网络\n是否前往 LYKNS 开发人员网络（https://dev.lykns.tk/）", "是否打开外部网页", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)==DialogResult.OK)
+            {
+                Properties.Settings.Default.web = 1;
+                Properties.Settings.Default.Save();
+                wb wb = new wb();
+                wb.Show();
             }
         }
     }

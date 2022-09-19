@@ -4,7 +4,7 @@
   <description asmv2:iconFile="LYKNSCTB.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="点名器" version="1.5.0.6" language="neutral" processorArchitecture="amd64" />
+    <assemblyIdentity name="点名器" version="1.5.1.6" language="neutral" processorArchitecture="amd64" />
     <commandLine file="点名器.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -79,26 +79,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="点名器.exe" size="473536">
-      <assemblyIdentity name="点名器" version="1.5.0.6" language="neutral" processorArchitecture="amd64" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="点名器.exe" size="405952">
+      <assemblyIdentity name="点名器" version="1.5.1.6" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AgK6kLBti813BjfH6xWu9NVYKzRhZOxvMsQCG3HcWtk=</dsig:DigestValue>
+        <dsig:DigestValue>rv5//pWzM/3LI7g5vK5ATGaHlLrJzCHfX04L0DS8IUo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-CN\点名器.resources.dll" size="15360">
-      <assemblyIdentity name="点名器.resources" version="1.5.0.6" language="zh-CN" processorArchitecture="amd64" />
+      <assemblyIdentity name="点名器.resources" version="1.5.1.6" language="zh-CN" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6tsLLq6xXdHXdMJYg//IMLwuWjdl9H1iZT3CgApMyOg=</dsig:DigestValue>
+        <dsig:DigestValue>7sCWXn2jE2AVZCrfOBcTijpMMcziclTJes3i2fQw8Io=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -129,13 +129,13 @@
       <dsig:DigestValue>ZnuJGF53Mhs7rS4OAM/baepiqC2BeczciIEuDKJr8EA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="点名器.exe.config" size="1389">
+  <file name="点名器.exe.config" size="1502">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>YIyHGTz1Xe1fQxsGWfsqHzzIs5HVurV992SbyhY5u8I=</dsig:DigestValue>
+      <dsig:DigestValue>K+PthQPUv0ofolZszz4YlaoFHU/nMlvuZDBQiQNTwX4=</dsig:DigestValue>
     </hash>
   </file>
   <fileAssociation extension=".cbcf" description="CaptB点名器名单文件" progid="1" defaultIcon="Icon1.ico" xmlns="urn:schemas-microsoft-com:clickonce.v1" />

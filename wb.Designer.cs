@@ -48,7 +48,7 @@
             this.webView21.Location = new System.Drawing.Point(12, 41);
             this.webView21.Name = "webView21";
             this.webView21.Size = new System.Drawing.Size(760, 508);
-            this.webView21.Source = new System.Uri("https://www.lykns.tk", System.UriKind.Absolute);
+            this.webView21.Source = new System.Uri("https://dev.lykns.tk", System.UriKind.Absolute);
             this.webView21.TabIndex = 0;
             this.webView21.ZoomFactor = 1D;
             // 
@@ -92,7 +92,7 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // webview
+            // wb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -106,8 +106,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(800, 600);
-            this.Name = "webview";
+            this.Name = "wb";
             this.Text = "CaptB WebView";
+            this.Load += new System.EventHandler(this.wb_Load);
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -115,11 +116,10 @@
         }
 
         #endregion
-
-        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
+        public Microsoft.Web.WebView2.WinForms.WebView2 webView21;
     }
 }

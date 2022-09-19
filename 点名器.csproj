@@ -203,7 +203,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\LYKNS 软件许可条款.rtf" />
     <None Include="点名器_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -211,9 +210,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LYKNSCTB.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LYKNSCTB-logo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LYKNSCTB.png" />
@@ -233,6 +229,7 @@
   <ItemGroup>
     <Content Include="Icon1.ico" />
     <Content Include="LYKNSCTB.ico" />
+    <None Include="Resources\LYKNSCTB-logo.png" />
     <EmbeddedResource Include="Resources\Icon1.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

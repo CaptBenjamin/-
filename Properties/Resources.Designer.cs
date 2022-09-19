@@ -89,15 +89,5 @@ namespace 点名器.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        /// <summary>
-        ///   查找类似 {\rtf1\adeflang1025\ansi\ansicpg936\uc2\adeff31507\deff0\stshfdbch31505\stshfloch31506\stshfhich31506\stshfbi31507\deflang1033\deflangfe2052\themelang1033\themelangfe2052\themelangcs0{\fonttbl{\f0\fbidi \froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f2\fbidi \fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
-        ///{\f3\fbidi \froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f10\fbidi \fnil\fcharset2\fprq2{\*\panose 05000000000000000000}Wingdings;}{\f13 [字符串的其余部分被截断]&quot;; 的本地化字符串。
-        /// </summary>
-        internal static string rtf {
-            get {
-                return ResourceManager.GetString("rtf", resourceCulture);
-            }
-        }
     }
 }

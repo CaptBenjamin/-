@@ -152,8 +152,9 @@ namespace 点名器
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Main.c_name = "----";
             Main.num = 0;
-            textBox1.Text = "欢迎使用";
+            textBox1.Text = "----";
             if (File.Exists(Application.StartupPath + @"\cbcf.txt"))
             {
                 if (File.Exists(Application.StartupPath + @"\cf.txt"))

@@ -887,7 +887,4 @@
   <data name="LYKNSCTB_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LYKNSCTB-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rtf" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LYKNS 软件许可条款.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
 </root>
