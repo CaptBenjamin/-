@@ -1,6 +1,4 @@
-﻿using Microsoft.Web.WebView2.WinForms;
-using Microsoft.Web.WebView2.Wpf;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -292,7 +290,7 @@ namespace 点名器
                     System.Environment.Exit(0);
                 }
             }
-            button1.Text = c_name;
+            //button1.Text = c_name;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -345,10 +343,7 @@ namespace 点名器
         {
             if(MessageBox.Show("LYKNS CaptB 技术博客已于2022年7月停用，功能整合至 LYKNS 开发人员网络\n是否前往 LYKNS 开发人员网络（https://dev.lykns.tk/）", "是否打开外部网页", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)==DialogResult.OK)
             {
-                Properties.Settings.Default.web = 1;
-                Properties.Settings.Default.Save();
-                wb wb = new wb();
-                wb.Show();
+                System.Diagnostics.Process.Start("https://dev.lykns.tk/");
             }
         }
     }
