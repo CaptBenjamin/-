@@ -94,5 +94,17 @@ namespace 点名器.Properties {
                 this["web"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string update {
+            get {
+                return ((string)(this["update"]));
+            }
+            set {
+                this["update"] = value;
+            }
+        }
     }
 }

@@ -121,7 +121,29 @@ namespace 点名器
                 {
                     if (Main.num == Main.m)
                     {
-                        MessageBox.Show("点名失败\n无剩余可点人名，请检查首选项设置是否正确或重置状态", "CB点名器", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (MessageBox.Show("点名失败\n无剩余可点人名，请检查首选项设置是否正确或重置状态\n单击“确定”将会重置状态", "CB点名器", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.OK)
+                        {
+                            Main.num = 0;
+                            Main.c_name = "----";
+                            button1.Text = "----";
+                            if (File.Exists(Application.StartupPath + @"\cbcf.txt"))
+                            {
+                                if (File.Exists(Application.StartupPath + @"\cf.txt"))
+                                {
+                                    System.IO.File.Delete(Application.StartupPath + @"\cf.txt");
+                                    System.IO.File.Copy(Application.StartupPath + @"\cbcf.txt", Application.StartupPath + @"\cf.txt", true);
+                                    MessageBox.Show("重置成功", "重置状态", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("重置失败\n未检索到可用名单", "重置状态", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("重置失败\n未检索到可用名单", "重置状态", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
                     }
                     else
                     {

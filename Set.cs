@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace 点名器
 {
@@ -162,15 +163,19 @@ namespace 点名器
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.web = 0;
-            Properties.Settings.Default.Save();
-            wb wb = new wb();
-            wb.Show();
+            System.Diagnostics.Process.Start("https://eow.lykns.tk/support");
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("LYKNS 软件许可条款\n请注意：使用该订购服务和软件时，必须遵守您注册订购服务时同意的协议以及您为获得该软件的许可而签订的协议中的条款和条件。例如，如果您是：\n\n• 批量许可客户，则对该软件的使用应受批量许可协议的约束。\n• LYKNS 在线订购客户，则对该软件的使用应受 LYKNS 在线订购协议的约束。\n\n如果您尚未通过正规渠道从 LYKNS 或其授权分销商处获得该服务或软件的有效许可，则不得使用该服务或软件。\n\n如果你的组织是 LYKNS 客户，你就可以使用 LYKNS 软件中的某些已连接服务。你也许还能访问 LYKNS 提供的其他已连接服务，它们受到单独的条款和隐私承诺保护。请访问 www.lykns.tk，详细了解 LYKNS 的其他已连接服务。","LYKNS 软件许可条款",MessageBoxButtons.OK,MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            System.Diagnostics.Process.Start("https://eow.lykns.tk/slt");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Process pr = new Process();//声明一个进程类对象
+            pr.StartInfo.FileName = Application.StartupPath + @"\CBRC_Update.exe";
+            pr.Start();
         }
     }
 }

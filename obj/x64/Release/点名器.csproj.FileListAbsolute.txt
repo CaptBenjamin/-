@@ -1,6 +1,39 @@
+E:\点名器 - 高一五班版\bin\x64\Release\Resources\Icon1.ico
+E:\点名器 - 高一五班版\bin\x64\Release\点名器.exe.config
+E:\点名器 - 高一五班版\bin\x64\Release\点名器.exe.manifest
+E:\点名器 - 高一五班版\bin\x64\Release\点名器.application
+E:\点名器 - 高一五班版\bin\x64\Release\点名器.exe
+E:\点名器 - 高一五班版\bin\x64\Release\zh-CN\点名器.resources.dll
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.csproj.AssemblyReference.cache
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.csproj.SuggestedBindingRedirects.cache
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.AboutBox1.resources
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.content.resources
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.Main.resources
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.Set.resources
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.Sm.resources
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.Properties.Resources.resources
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.Main.zh-CN.resources
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.Set.zh-CN.resources
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.csproj.GenerateResource.cache
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.csproj.CoreCompileInputs.cache
+E:\点名器 - 高一五班版\obj\x64\Release\zh-CN\点名器.resources.dll
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.TrustInfo.xml
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.exe.manifest
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.application
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.exe
+E:\点名器 - 高一五班版\bin\x64\Release\Microsoft.Toolkit.Uwp.Notifications.dll
+E:\点名器 - 高一五班版\bin\x64\Release\Microsoft.Toolkit.Uwp.Notifications.pdb
+E:\点名器 - 高一五班版\bin\x64\Release\System.ValueTuple.dll
+E:\点名器 - 高一五班版\obj\x64\Release\点名器.csproj.CopyComplete
+E:\点名器\bin\x64\Release\Resources\Icon1.ico
 E:\点名器\bin\x64\Release\点名器.exe.config
+E:\点名器\bin\x64\Release\点名器.exe.manifest
+E:\点名器\bin\x64\Release\点名器.application
 E:\点名器\bin\x64\Release\点名器.exe
 E:\点名器\bin\x64\Release\zh-CN\点名器.resources.dll
+E:\点名器\bin\x64\Release\Microsoft.Toolkit.Uwp.Notifications.dll
+E:\点名器\bin\x64\Release\Microsoft.Toolkit.Uwp.Notifications.pdb
+E:\点名器\bin\x64\Release\System.ValueTuple.dll
 E:\点名器\obj\x64\Release\点名器.csproj.AssemblyReference.cache
 E:\点名器\obj\x64\Release\点名器.csproj.SuggestedBindingRedirects.cache
 E:\点名器\obj\x64\Release\点名器.AboutBox1.resources
@@ -14,19 +47,8 @@ E:\点名器\obj\x64\Release\点名器.Set.zh-CN.resources
 E:\点名器\obj\x64\Release\点名器.csproj.GenerateResource.cache
 E:\点名器\obj\x64\Release\点名器.csproj.CoreCompileInputs.cache
 E:\点名器\obj\x64\Release\zh-CN\点名器.resources.dll
-E:\点名器\obj\x64\Release\点名器.exe
-E:\点名器\bin\x64\Release\Resources\Icon1.ico
-E:\点名器\bin\x64\Release\runtimes\win-x64\native\WebView2Loader.dll
-E:\点名器\bin\x64\Release\Microsoft.Web.WebView2.Core.dll
-E:\点名器\bin\x64\Release\Microsoft.Web.WebView2.WinForms.dll
-E:\点名器\bin\x64\Release\Microsoft.Web.WebView2.Wpf.dll
-E:\点名器\bin\x64\Release\Microsoft.Web.WebView2.Core.xml
-E:\点名器\bin\x64\Release\Microsoft.Web.WebView2.WinForms.xml
-E:\点名器\bin\x64\Release\Microsoft.Web.WebView2.Wpf.xml
-E:\点名器\obj\x64\Release\点名器.wb.resources
-E:\点名器\obj\x64\Release\点名器.csproj.CopyComplete
 E:\点名器\obj\x64\Release\点名器.TrustInfo.xml
 E:\点名器\obj\x64\Release\点名器.exe.manifest
-E:\点名器\bin\x64\Release\点名器.exe.manifest
-E:\点名器\bin\x64\Release\点名器.application
 E:\点名器\obj\x64\Release\点名器.application
+E:\点名器\obj\x64\Release\点名器.csproj.CopyComplete
+E:\点名器\obj\x64\Release\点名器.exe

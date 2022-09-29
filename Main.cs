@@ -1,5 +1,4 @@
-﻿using Microsoft.Web.WebView2.WinForms;
-using Microsoft.Web.WebView2.Wpf;
+﻿using Microsoft.Toolkit.Uwp.Notifications;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +23,7 @@ namespace 点名器
     public partial class Main : Form
     {
         public static int m;
-        public static string c_name ="----";
+        public static string c_name = "----";
         public static int num = 0;
         public Main()
         {
@@ -33,6 +32,22 @@ namespace 点名器
             {
                 string[] str = File.ReadAllLines(Application.StartupPath + @"\cf.txt");
                 int.TryParse(str[0], out m);
+            }
+            if (Properties.Settings.Default.update != System.DateTime.Now.ToString("d"))
+            {
+                if (File.Exists(Application.StartupPath + @"\CBRC_Update.exe"))
+                {
+                    Process pr = new Process();//声明一个进程类对象
+                    pr.StartInfo.FileName = Application.StartupPath + @"\CBRC_Update.exe";
+                    pr.Start();
+                    Properties.Settings.Default.update = System.DateTime.Now.ToString("d");
+                    Properties.Settings.Default.Save();
+                }
+                else
+                {
+                    if (MessageBox.Show("更新程序可能损坏或被禁用\n您可以尝试重新安装此应用程序\n单击“确定”下载最新安装程序", "检查更新失败", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+                        System.Diagnostics.Process.Start("https://dev.lykns.tk/59gqco9i74vju94bytip/setup.exe");
+                }
             }
         }
 
@@ -210,7 +225,7 @@ namespace 点名器
             {
             retry:
                 Random ran = new Random();
-                int n = ran.Next(1, Main.m+1);
+                int n = ran.Next(1, Main.m + 1);
                 string path = Application.StartupPath + @"\cf.txt";
                 StreamReader sr = new StreamReader(path);
                 string str = sr.ReadToEnd();
@@ -221,7 +236,29 @@ namespace 点名器
                 {
                     if (num == m)
                     {
-                        MessageBox.Show("点名失败\n无剩余可点人名，请检查首选项设置是否正确或重置状态", "CB点名器", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (MessageBox.Show("点名失败\n无剩余可点人名，请检查首选项设置是否正确或重置状态\n单击“确定”将会重置状态", "CB点名器", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.OK)
+                        {
+                            num = 0;
+                            Main.c_name = "----";
+                            button1.Text = "----";
+                            if (File.Exists(Application.StartupPath + @"\cbcf.txt"))
+                            {
+                                if (File.Exists(Application.StartupPath + @"\cf.txt"))
+                                {
+                                    System.IO.File.Delete(Application.StartupPath + @"\cf.txt");
+                                    System.IO.File.Copy(Application.StartupPath + @"\cbcf.txt", Application.StartupPath + @"\cf.txt", true);
+                                    MessageBox.Show("重置成功", "重置状态", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("重置失败\n未检索到可用名单", "重置状态", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("重置失败\n未检索到可用名单", "重置状态", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
                     }
                     else
                     {
@@ -256,7 +293,7 @@ namespace 点名器
             {
                 if (MessageBox.Show("未检测到可用名单\n请导入名单", "CB点名器", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
                 {
-                    r1:
+                r1:
                     var filePath = string.Empty;
                     OpenFileDialog openFileDialog = new OpenFileDialog();
                     openFileDialog.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
@@ -277,7 +314,7 @@ namespace 点名器
                     }
                     else
                     {
-                        if(MessageBox.Show("导入失败", "导入名单", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)==DialogResult.Retry)
+                        if (MessageBox.Show("导入失败", "导入名单", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
                         {
                             goto r1;
                         }
@@ -312,7 +349,29 @@ namespace 点名器
                 {
                     if (num == m)
                     {
-                        MessageBox.Show("点名失败\n无剩余可点人名，请检查首选项设置是否正确或重置状态", "CB点名器", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (MessageBox.Show("点名失败\n无剩余可点人名，请检查首选项设置是否正确或重置状态\n单击“确定”将会重置状态", "CB点名器", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.OK)
+                        {
+                            num = 0;
+                            Main.c_name = "----";
+                            button1.Text = "----";
+                            if (File.Exists(Application.StartupPath + @"\cbcf.txt"))
+                            {
+                                if (File.Exists(Application.StartupPath + @"\cf.txt"))
+                                {
+                                    System.IO.File.Delete(Application.StartupPath + @"\cf.txt");
+                                    System.IO.File.Copy(Application.StartupPath + @"\cbcf.txt", Application.StartupPath + @"\cf.txt", true);
+                                    MessageBox.Show("重置成功", "重置状态", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("重置失败\n未检索到可用名单", "重置状态", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("重置失败\n未检索到可用名单", "重置状态", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
                     }
                     else
                     {
@@ -343,12 +402,9 @@ namespace 点名器
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
-            if(MessageBox.Show("LYKNS CaptB 技术博客已于2022年7月停用，功能整合至 LYKNS 开发人员网络\n是否前往 LYKNS 开发人员网络（https://dev.lykns.tk/）", "是否打开外部网页", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)==DialogResult.OK)
+            if (MessageBox.Show("LYKNS CaptB 技术博客已于2022年7月停用，功能整合至 LYKNS 开发人员网络\n是否前往 LYKNS 开发人员网络（https://dev.lykns.tk/）", "是否打开外部网页", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                Properties.Settings.Default.web = 1;
-                Properties.Settings.Default.Save();
-                wb wb = new wb();
-                wb.Show();
+                System.Diagnostics.Process.Start("https://dev.lykns.tk/");
             }
         }
     }
