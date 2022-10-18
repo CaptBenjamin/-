@@ -14,4 +14,4 @@ CaptB 点名器
 3. 点击 CBRC 内的导出名单即可生成名单文件。
 
 ## 下载安装
-1. 访问 [LYKNS 开发人员网络](https://dev.lykns.tk/) 或直接访问 [LYKNSDN 的 CaptB 点名器页面](https://dev.lykns.tk/CBRC) 下载安装程序
+1. 访问 [LYKNS 开发人员网络](https://dev.lykns.tk/) 或直接访问 [LYKNSDN 的 CaptB 点名器页面](https://dev.lykns.tk/CBRC/publish) 下载安装程序
