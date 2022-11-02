@@ -124,7 +124,7 @@
             this.Name = "Sm";
             this.Opacity = 0.5D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "CB点名器";
+            this.Text = "CaptB 点名器";
             this.TopMost = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form3_FormClosed);
             this.Load += new System.EventHandler(this.Sm_Load);

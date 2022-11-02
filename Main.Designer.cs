@@ -44,8 +44,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -64,23 +66,26 @@
             this.导入名单ToolStripMenuItem,
             this.导出名单ToolStripMenuItem,
             this.退出ToolStripMenuItem});
+            this.文件ToolStripMenuItem.Image = global::点名器.Properties.Resources.Icon_0162;
             this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
             resources.ApplyResources(this.文件ToolStripMenuItem, "文件ToolStripMenuItem");
             // 
             // 导入名单ToolStripMenuItem
             // 
-            this.导入名单ToolStripMenuItem.Name = "导入名单ToolStripMenuItem";
             resources.ApplyResources(this.导入名单ToolStripMenuItem, "导入名单ToolStripMenuItem");
+            this.导入名单ToolStripMenuItem.Name = "导入名单ToolStripMenuItem";
             this.导入名单ToolStripMenuItem.Click += new System.EventHandler(this.导入名单ToolStripMenuItem_Click);
             // 
             // 导出名单ToolStripMenuItem
             // 
+            this.导出名单ToolStripMenuItem.Image = global::点名器.Properties.Resources.Icon_0670;
             this.导出名单ToolStripMenuItem.Name = "导出名单ToolStripMenuItem";
             resources.ApplyResources(this.导出名单ToolStripMenuItem, "导出名单ToolStripMenuItem");
             this.导出名单ToolStripMenuItem.Click += new System.EventHandler(this.导出名单ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
+            this.退出ToolStripMenuItem.Image = global::点名器.Properties.Resources.Icon_0329;
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
             resources.ApplyResources(this.退出ToolStripMenuItem, "退出ToolStripMenuItem");
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
@@ -90,29 +95,34 @@
             this.查看ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.完整名单ToolStripMenuItem,
             this.未点名单ToolStripMenuItem});
+            this.查看ToolStripMenuItem.Image = global::点名器.Properties.Resources.Icon_0620;
             this.查看ToolStripMenuItem.Name = "查看ToolStripMenuItem";
             resources.ApplyResources(this.查看ToolStripMenuItem, "查看ToolStripMenuItem");
             // 
             // 完整名单ToolStripMenuItem
             // 
+            this.完整名单ToolStripMenuItem.Image = global::点名器.Properties.Resources.Icon_0055;
             this.完整名单ToolStripMenuItem.Name = "完整名单ToolStripMenuItem";
             resources.ApplyResources(this.完整名单ToolStripMenuItem, "完整名单ToolStripMenuItem");
             this.完整名单ToolStripMenuItem.Click += new System.EventHandler(this.完整名单ToolStripMenuItem_Click);
             // 
             // 未点名单ToolStripMenuItem
             // 
+            this.未点名单ToolStripMenuItem.Image = global::点名器.Properties.Resources.Icon_0058;
             this.未点名单ToolStripMenuItem.Name = "未点名单ToolStripMenuItem";
             resources.ApplyResources(this.未点名单ToolStripMenuItem, "未点名单ToolStripMenuItem");
             this.未点名单ToolStripMenuItem.Click += new System.EventHandler(this.未点名单ToolStripMenuItem_Click);
             // 
             // 设置ToolStripMenuItem
             // 
+            this.设置ToolStripMenuItem.Image = global::点名器.Properties.Resources.Icon_0506;
             this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
             resources.ApplyResources(this.设置ToolStripMenuItem, "设置ToolStripMenuItem");
             this.设置ToolStripMenuItem.Click += new System.EventHandler(this.设置ToolStripMenuItem_Click);
             // 
             // 关于ToolStripMenuItem
             // 
+            this.关于ToolStripMenuItem.Image = global::点名器.Properties.Resources.Icon_0692;
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
             resources.ApplyResources(this.关于ToolStripMenuItem, "关于ToolStripMenuItem");
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
@@ -148,31 +158,36 @@
             // pictureBox1
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Image = global::点名器.Properties.Resources.LYKNSCTB_logo;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button2);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
             // Main
             // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
             this.Name = "Main";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Main_Load);
+            this.Resize += new System.EventHandler(this.Main_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,6 +210,7 @@
         private System.Windows.Forms.ToolStripMenuItem 未点名单ToolStripMenuItem;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
