@@ -106,17 +106,5 @@ namespace 点名器.Properties {
                 this["update"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string uptime {
-            get {
-                return ((string)(this["uptime"]));
-            }
-            set {
-                this["uptime"] = value;
-            }
-        }
     }
 }

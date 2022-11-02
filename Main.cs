@@ -28,7 +28,6 @@ namespace 点名器
         public Main()
         {
             InitializeComponent();
-            button1.Location = new Point(217, 57);
             if (File.Exists(Application.StartupPath + @"\cf.txt"))
             {
                 string[] str = File.ReadAllLines(Application.StartupPath + @"\cf.txt");
@@ -42,16 +41,12 @@ namespace 点名器
                     pr.StartInfo.FileName = Application.StartupPath + @"\CBRC_Update.exe";
                     pr.Start();
                     Properties.Settings.Default.update = System.DateTime.Now.ToString("d");
-                    Properties.Settings.Default.uptime = System.DateTime.Now.ToString("F");
                     Properties.Settings.Default.Save();
                 }
                 else
                 {
                     if (MessageBox.Show("更新程序可能损坏或被禁用\n您可以尝试重新安装此应用程序\n单击“确定”下载最新安装程序", "检查更新失败", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
-                        System.Diagnostics.Process.Start("https://dev.lykns.tk/CBRC/publish");
-                    Properties.Settings.Default.update = System.DateTime.Now.ToString("d");
-                    Properties.Settings.Default.uptime = System.DateTime.Now.ToString("F");
-                    Properties.Settings.Default.Save();
+                        System.Diagnostics.Process.Start("https://dev.lykns.tk/59gqco9i74vju94bytip/setup.exe");
                 }
             }
         }
@@ -165,7 +160,7 @@ namespace 点名器
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Main.num = 0;
+            num = 0;
             Main.c_name = "----";
             button1.Text = "----";
             if (File.Exists(Application.StartupPath + @"\cbcf.txt"))
@@ -178,10 +173,8 @@ namespace 点名器
                 }
                 else
                 {
-                    System.IO.File.Copy(Application.StartupPath + @"\cbcf.txt", Application.StartupPath + @"\cf.txt", true);
+                    MessageBox.Show("重置失败\n未检索到可用名单", "重置状态", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                string[] str = File.ReadAllLines(Application.StartupPath + @"\cf.txt");
-                int.TryParse(str[0], out Main.m);
             }
             else
             {
@@ -409,19 +402,10 @@ namespace 点名器
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
-            if (MessageBox.Show("是否前往 LYKNS 开发人员网络（https://dev.lykns.tk/CBRC/publish）", "是否打开外部网页", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("LYKNS CaptB 技术博客已于2022年7月停用，功能整合至 LYKNS 开发人员网络\n是否前往 LYKNS 开发人员网络（https://dev.lykns.tk/）", "是否打开外部网页", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                System.Diagnostics.Process.Start("https://dev.lykns.tk/CBRC/publish");
+                System.Diagnostics.Process.Start("https://dev.lykns.tk/");
             }
-        }
-
-        private void Main_Resize(object sender, EventArgs e)
-        {
-            int b = button2.Location.Y;
-            button2.Location = new System.Drawing.Point(217, b);
-            button2.Width = panel1.Width / 2 - 25 - 217;
-            button3.Location = new System.Drawing.Point(panel1.Width / 2 + 25, b);
-            button3.Width = panel1.Width / 2 - 25 - 217;
         }
     }
 }

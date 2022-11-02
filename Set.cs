@@ -18,7 +18,6 @@ namespace 点名器
         {
             InitializeComponent();
             label9.Text = "当前值：" + Properties.Settings.Default.howtrans + "%";
-            label15.Text = "上次检查更新时间：" + Properties.Settings.Default.uptime;
             trackBar1.Value = Properties.Settings.Default.howtrans;
             if(Properties.Settings.Default.istrans==true)
             {
@@ -174,23 +173,9 @@ namespace 点名器
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (File.Exists(Application.StartupPath + @"\CBRC_Update.exe"))
-            {
-                Process pr = new Process();//声明一个进程类对象
-                pr.StartInfo.FileName = Application.StartupPath + @"\CBRC_Update.exe";
-                pr.Start();
-                Properties.Settings.Default.update = System.DateTime.Now.ToString("d");
-                Properties.Settings.Default.uptime = System.DateTime.Now.ToString("F");
-                Properties.Settings.Default.Save();
-            }
-            else
-            {
-                if (MessageBox.Show("更新程序可能损坏或被禁用\n您可以尝试重新安装此应用程序\n单击“确定”下载最新安装程序", "检查更新失败", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
-                    System.Diagnostics.Process.Start("https://dev.lykns.tk/CBRC/publish");
-                Properties.Settings.Default.update = System.DateTime.Now.ToString("d");
-                Properties.Settings.Default.uptime = System.DateTime.Now.ToString("F");
-                Properties.Settings.Default.Save();
-            }
+            Process pr = new Process();//声明一个进程类对象
+            pr.StartInfo.FileName = Application.StartupPath + @"\CBRC_Update.exe";
+            pr.Start();
         }
     }
 }
