@@ -1,0 +1,10 @@
+M:\Works\新一代CaptB点名器\名单编辑器\bin\Release\名单编辑器.exe.config
+M:\Works\新一代CaptB点名器\名单编辑器\bin\Release\名单编辑器.exe
+M:\Works\新一代CaptB点名器\名单编辑器\bin\Release\名单编辑器.pdb
+M:\Works\新一代CaptB点名器\名单编辑器\obj\Release\名单编辑器.csproj.AssemblyReference.cache
+M:\Works\新一代CaptB点名器\名单编辑器\obj\Release\名单编辑器.Form1.resources
+M:\Works\新一代CaptB点名器\名单编辑器\obj\Release\名单编辑器.Properties.Resources.resources
+M:\Works\新一代CaptB点名器\名单编辑器\obj\Release\名单编辑器.csproj.GenerateResource.cache
+M:\Works\新一代CaptB点名器\名单编辑器\obj\Release\名单编辑器.csproj.CoreCompileInputs.cache
+M:\Works\新一代CaptB点名器\名单编辑器\obj\Release\名单编辑器.exe
+M:\Works\新一代CaptB点名器\名单编辑器\obj\Release\名单编辑器.pdb
